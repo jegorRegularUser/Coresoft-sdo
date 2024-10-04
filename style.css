@@ -66,8 +66,8 @@ body {
     margin: 38px 0 24px;
   }
 
-  /*Automation  */
-  .automation .content {
+  /*more  */
+  .more .content {
     max-width: 65%;
   }
 
@@ -97,8 +97,8 @@ body {
     margin: 28px 0 20px;
   }
 
-  /*Automation  */
-  .automation .content {
+  /*more  */
+  .more .content {
     max-width: 80%;
   }
 
@@ -328,9 +328,9 @@ a {
   scale: 1.2;
 }
 
-/*Automation  */
+/*more  */
 
-.automation {
+.more {
   padding: 40px 20px;
   position: relative;
   color: rgb(255, 255, 255);
