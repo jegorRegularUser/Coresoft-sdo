@@ -15,7 +15,8 @@ const closeContactModal = () => {
 };
 
 [contactBtn_pre, contactBtn_sol].forEach((el) =>
-  el.addEventListener("click", () => {
+  el.addEventListener("click", (e) => {
+    e.preventDefault()
     contactModal.classList.remove("hide");
     contactModal.classList.add("show");
     contactModal.style.display = "block";
@@ -23,27 +24,23 @@ const closeContactModal = () => {
 );
 
 const modalFormBtn = document.getElementById("modalFormBtn");
-
+const modalFormCancelBtn = document.getElementById("modalFormBtn-cancel")
 modalFormBtn.addEventListener("click", (e) => {
   e.preventDefault();
   closeContactModal();
 });
 contactCancelBtn.addEventListener("click", e =>{
+  e.preventDefault();
   closeContactModal();
 })
-const formBtn = document.getElementById("formBtn");
-formBtn.addEventListener("click", (e) => {
+modalFormCancelBtn.addEventListener("click", e =>{
   e.preventDefault();
-});
+  closeContactModal();
+})
+
 
 window.addEventListener("click", (event) => {
-  if (
-    (!nav.contains(event.target) || event.target.localName === "a") &&
-    isDropDownOpen
-  ) {
-    dropDownHandler();
-  }
-  if (event.target == contactModal || event.target == casesModal) {
+  if (event.target == contactModal) {
     closeCasesModal();
     closeContactModal();
   }
