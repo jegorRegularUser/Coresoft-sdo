@@ -32,7 +32,7 @@ body {
 @media (min-width: 1201px) {
   .modal-content {
     width: 60%;
-    margin: 15% auto;
+    margin: 10% auto;
   }
   .modal-content form{
     width: 70%;
@@ -42,7 +42,7 @@ body {
 @media (max-width: 1200px) {
   .modal-content {
     width: 70%;
-    margin: 15% auto;
+    margin: 10% auto;
   }
   .modal-content form{
     width: 80%;
@@ -105,7 +105,9 @@ body {
   }
 
   /*  Contact*/
-
+  .contact .modal-content {
+    padding: 60px 50px 40px;
+  }
   /*footer  */
 }
 
@@ -166,6 +168,9 @@ body {
 
 
   /*  Contact*/
+  .contact .modal-content {
+    padding: 30px 50px 30px;
+  }
   /*footer  */
 }
 
@@ -220,8 +225,17 @@ body {
     min-height: 100vh;
     margin: 0;
   }
+  .contact .modal-content .btns{
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
   .contact .modal-content .btn{
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
+    font-size: 18px;
+  }
+  .contact .modal-content .btn-white{
+    padding: 1rem 1rem;
+    font-size: 18px;
   }
 
   /*footer  */
@@ -319,21 +333,7 @@ a {
   transform: translateY(0px);
 }
 
-.cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 0 20px;
-}
 
-.card {
-  width: 255px;
-  height: 161px;
-  object-fit: contain;
-  border: 1px solid var(--light-gray);
-  border-radius: 0.5rem;
-}
 
 .modal {
   display: none;
@@ -474,7 +474,6 @@ a {
 /*  Contact*/
 
 .contact .modal-content {
-  padding: 30px 50px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -492,6 +491,9 @@ a {
 .contact .modal-content .input {
   border: 2px solid var(--light-gray);
   width: 90%;
+  min-width: 90%;
+  max-width: 90%;
+  min-height: 3rem;
 }
 
 .contact .modal-content {
@@ -501,10 +503,6 @@ a {
 .contact .modal-content p {
   color: #000000;
 }
-
-
-
-
 
 .contact form {
   display: flex;
@@ -525,10 +523,6 @@ button {
   border: 2px solid var(--light-purple);
   padding: 8px;
 }
-
-
-
-
 
 .contact .modal-content form {
   justify-content: center;
